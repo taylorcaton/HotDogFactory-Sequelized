@@ -8,8 +8,8 @@ var env       = process.env.JAWSDB_URL || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable],{
+if (config) {
+  var sequelize = new Sequelize(process.env.JAWSDB_URL,{
     dialectOptions: {
       ssl: true /* for SSL config since Heroku gives you this out of the box */
     }
