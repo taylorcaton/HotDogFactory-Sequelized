@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card dogCards">
+            <img class="card-img-top img-fluid" src="" alt="">
+            <div class="card-block text-xs-left">
+                <h4 class="card-title">Available Dogs</h4>
+                <p class="card-text">Click to "Eat!"</p>
+            </div>
+            {{#each available}}
+            <p>
+                <button name="btn-hotdog" class="btn btn-primary btn-lg btn-block btn-hotdog" value="{{id}}">{{this.hotdog_name}}</button>
+            </p>
+            {{/each}}
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card dogCards">
+            <img class="card-img-top" data-src="" alt="">
+            <div class="card-block text-xs-right">
+                <h4 class="card-title">Devoured Dogs</h4>
+            </div>
+            <ul class="text-muted">
+                {{#each devoured}}
+                <li>
+                    {{this.hotdog_name}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-block text-xs-center">
+        <h4 class="card-title">Create Your Own!</h4>
+        <div class="form-group">
+            <input type="text" class="form-control" name="hotdog_name" id="hotdog_name" aria-describedby="helpId" placeholder="Enter the name of your custom dog, dawg">
+            <button type="submit" class="btn btn-primary" id="btn-custom-hotdog">Submit</button>
+        </div>
+    </div>
+</div>

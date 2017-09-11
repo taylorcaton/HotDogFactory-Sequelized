@@ -1,0 +1,38 @@
+#hotDogIMG{
+    float: left;
+    height: 122px;
+}
+
+.btn-hotdog{
+    border-radius: 2.0rem;
+}
+
+.dogCards{
+    border: none !important;
+}
+
+h1{
+    font-family: 'Modak', cursive;
+    color:  #EB6864;
+}
+
+.jumbotron{
+    background: url('../img/food.png');
+}
+
+.card{
+    background: none;
+    border-color: green;
+}
+
+.jumbotron h1{
+    margin-bottom: 0px;
+}
+
+h4{
+    color: green;
+}
+
+#btn-custom-hotdog{
+    margin-top: 10px;
+}
