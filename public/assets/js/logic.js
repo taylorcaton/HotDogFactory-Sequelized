@@ -1,5 +1,3 @@
-console.log("js logic loaded");
-
 $(".btn-hotdog").on("click", removeDog);
 
 $("#btn-custom-hotdog").on("click", addDog);
