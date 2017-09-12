@@ -41,6 +41,6 @@ function addDog(e) {
     });
   }else{
     console.log(`Gotta name that doggy!`);
-    $.("#hotdog_name").attr("placeholder", "Gotta name the dog first, dawg!")
+    $("#hotdog_name").attr("placeholder", "Gotta name the dog first, dawg!")
   }
 }
