@@ -27,15 +27,20 @@ function addDog(e) {
   // e.preventDefault();
   var name = $("#hotdog_name").val();
 
-  console.log(`Sending ID: ${name} to the add script`);
+  if (name) {
+    console.log(`Sending ID: ${name} to the add script`);
 
-  $.ajax({
-    type: "POST",
-    url: "/",
-    data: { name: name },
-    success: function(res) {
-      console.log("Ajax done.");
-      location.reload();
-    }
-  });
+    $.ajax({
+      type: "POST",
+      url: "/",
+      data: { name: name },
+      success: function(res) {
+        console.log("Ajax done.");
+        location.reload();
+      }
+    });
+  }else{
+    console.log(`Gotta name that doggy!`);
+    $.("#hotdog_name").attr("placeholder", "Gotta name the dog first, dawg!")
+  }
 }
